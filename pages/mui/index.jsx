@@ -1,23 +1,35 @@
-import {Typography, Button} from "@material-ui/core";
+import {
+  Typography,
+  Button,
+  ButtonGroup,
+  Container,
+  IconButton,
+} from "@material-ui/core";
 
-const mui = () => {
-   return (
-      <>
-         <Typography variant="h1" color="primary" align="center">
-            h1 Heading
-         </Typography>
-         <Typography variant="h2">h2 Heading</Typography>
+import AcUnitOutlinedIcon from "@material-ui/icons/AcUnitOutlined";
+import SendIcon from "@material-ui/icons/Send";
+
+const Create = () => {
+  return (
+    <>
+      <Container>
+        <Typography variant="h6" component="h2" gutterBottom>
+          Create a New Note
+        </Typography>
+        <Button
+          onClick={() => console.log("btn clicked")}
+          type="submit"
+          color="secondary"
+          variant="contained"
+          endIcon={<SendIcon />}
+        >
+          Submit
+        </Button>
+        <AcUnitOutlinedIcon />
+        <AcUnitOutlinedIcon color="secondary" fontSize="large" />   </Container>
       
-         <p>Lorem, ipsum dolor.</p>
-         <button>ok</button>
-         <Button>submit</Button>
-
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, odit deserunt? Voluptatum consectetur esse labore exercitationem accusantium vitae, porro, excepturi ipsa, reiciendis enim totam quod recusandae tempore aspernatur fuga? Eius!</p>
-         <input type="text"/>
-         <div></div>
-      </>
-   );
+    </>
+  );
 };
 
-
-export default mui;
+export default Create;
